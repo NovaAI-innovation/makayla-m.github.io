@@ -422,67 +422,54 @@
             <div class="connect-content">
                 <h2 class="section-title centered">Book a Session</h2>
                 <div class="title-underline centered"></div>
-                <p class="section-subtitle">Fill out the form below to request a booking. All required information must be provided for verification.</p>
+                <p class="section-subtitle">Fill out the form below to request a booking. All information will be kept confidential.</p>
 
-                <form class="booking-form">
-                    <div class="form-row">
-                        <input type="text" name="name" placeholder="Full Name" required>
-                        <input type="email" name="email" placeholder="Email Address" required>
-                    </div>
-                    <div class="form-row">
-                        <input type="tel" name="phone" placeholder="Phone Number" required>
-                        <select name="pronouns" required>
-                            <option value="">Pronouns</option>
-                            <option value="she/her">She/Her</option>
-                            <option value="he/him">He/Him</option>
-                            <option value="they/them">They/Them</option>
-                            <option value="other">Other</option>
-                        </select>
-                    </div>
-                    <div class="form-row">
-                        <select name="contact_method" required>
-                            <option value="">Preferred Contact Method</option>
-                            <option value="email">Email</option>
-                            <option value="phone">Phone</option>
-                            <option value="text">Text</option>
-                        </select>
-                        <input type="text" name="city" placeholder="Desired City" required>
-                    </div>
-                    <div class="form-row">
-                        <input type="text" name="date_length" placeholder="Date Length (e.g., 2 hours)" required>
-                        <input type="datetime-local" name="preferred_datetime" required>
-                    </div>
-                    <div class="form-row-radio">
-                        <label>
-                            <input type="radio" name="location_preference" value="incall" required>
-                            Incall (at a designated location)
-                        </label>
-                        <label>
-                            <input type="radio" name="location_preference" value="outcall" required>
-                            Outcall (traveling to your location)
-                        </label>
-                    </div>
-                    <div class="form-note">
-                        <small style="color: #d4af37; display: block; margin-bottom: 10px; line-height: 1.6;">
-                            <strong>📳 Photo Tips:</strong> Any camera quality works! Photos will be automatically compressed. Clear, well-lit photos work best for verification.
-                        </small>
-                    </div>
-                    <div class="form-row">
-                        <div class="file-upload-wrapper">
-                            <label for="id_front">Upload ID (Front): <small>Government-issued ID</small></label>
-                            <input type="file" id="id_front" name="id_front" accept="image/*" required>
-                            <label for="id_front" class="file-upload-button">Choose File</label>
-                            <div class="file-name-display" id="id_front_display">No file chosen</div>
-                        </div>
-                        <div class="file-upload-wrapper">
-                            <label for="id_selfie">Upload Selfie Holding ID: <small>You holding your ID</small></label>
-                            <input type="file" id="id_selfie" name="id_selfie" accept="image/*" required>
-                            <label for="id_selfie" class="file-upload-button">Choose File</label>
-                            <div class="file-name-display" id="id_selfie_display">No file chosen</div>
+                <!-- JotForm Embed Container -->
+                <div class="jotform-container">
+                    <!-- 
+                    ============================================================
+                    REPLACE THIS SECTION WITH YOUR JOTFORM EMBED CODE
+                    ============================================================
+                    
+                    After creating your form on JotForm:
+                    1. Click "Publish" button
+                    2. Choose "Embed" option
+                    3. Copy the iframe code
+                    4. Paste it here, replacing the placeholder below
+                    
+                    Example:
+                    <iframe
+                      id="JotFormIFrame-YOUR_FORM_ID"
+                      title="Booking Form"
+                      src="https://form.jotform.com/YOUR_FORM_ID"
+                      frameborder="0"
+                      style="min-width:100%;max-width:100%;height:1200px;border:none;"
+                      scrolling="no"
+                    >
+                    </iframe>
+                    <script src='https://cdn.jotfor.ms/s/umd/latest/for-form-embed-handler.js'></script>
+                    <script>window.jotformEmbedHandler("iframe[id='JotFormIFrame-YOUR_FORM_ID']", "https://form.jotform.com/")</script>
+                    -->
+                    
+                    <!-- TEMPORARY PLACEHOLDER (Remove this when you add JotForm code) -->
+                    <div class="form-placeholder">
+                        <div class="placeholder-content">
+                            <h3>🔧 Setup Required</h3>
+                            <p>Follow the instructions in <code>JOTFORM_COMPLETE_SETUP.md</code> to create your form.</p>
+                            <p>Then replace this placeholder with your JotForm embed code.</p>
+                            <ol style="text-align: left; max-width: 500px; margin: 20px auto;">
+                                <li>Create form on JotForm.com</li>
+                                <li>Customize design to match website</li>
+                                <li>Set up email notifications</li>
+                                <li>Get embed code</li>
+                                <li>Paste embed code here</li>
+                            </ol>
+                            <a href="https://www.jotform.com" target="_blank" class="btn btn-primary">Go to JotForm →</a>
                         </div>
                     </div>
-                    <button type="submit" class="btn btn-primary">Request Booking</button>
-                </form>
+                    <!-- END PLACEHOLDER -->
+                    
+                </div>
 
                 <p class="booking-note">
                     <small>All information is kept confidential. Age and identity verification is required for all bookings. Response within 24 hours.</small>
@@ -511,10 +498,7 @@
         <img src="" alt="" id="lightbox-image">
     </div>
 
-    <!-- EmailJS SDK -->
-    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
-    <!-- Image Compression Library -->
-    <script src="https://cdn.jsdelivr.net/npm/browser-image-compression@2.0.2/dist/browser-image-compression.js"></script>
+    <!-- Main JavaScript -->
     <script src="script.js"></script>
 </body>
 </html>

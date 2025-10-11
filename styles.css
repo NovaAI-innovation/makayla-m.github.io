@@ -1740,3 +1740,103 @@ button {
     font-weight: 600;
     letter-spacing: 1.5px;
 }
+
+
+/* ===========================
+   JotForm Integration Styles
+   =========================== */
+
+.jotform-container {
+    max-width: 900px;
+    margin: 40px auto;
+    background: rgba(45, 27, 61, 0.3);
+    border-radius: 20px;
+    padding: 30px;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.3);
+}
+
+.jotform-container iframe {
+    border-radius: 15px;
+    overflow: hidden;
+    display: block;
+}
+
+/* Placeholder Styling (remove after JotForm setup) */
+.form-placeholder {
+    background: linear-gradient(135deg, rgba(45, 27, 61, 0.9), rgba(26, 15, 36, 0.9));
+    border: 2px dashed #d4af37;
+    border-radius: 15px;
+    padding: 60px 40px;
+    text-align: center;
+    min-height: 500px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.placeholder-content {
+    max-width: 600px;
+}
+
+.placeholder-content h3 {
+    color: #d4af37;
+    font-size: 2rem;
+    margin-bottom: 20px;
+    font-family: 'Playfair Display', serif;
+}
+
+.placeholder-content p {
+    color: #f4e5d4;
+    font-size: 1.1rem;
+    margin-bottom: 15px;
+    line-height: 1.6;
+}
+
+.placeholder-content code {
+    background: rgba(212, 175, 55, 0.2);
+    padding: 4px 8px;
+    border-radius: 4px;
+    color: #d4af37;
+    font-family: 'Courier New', monospace;
+    font-size: 0.9rem;
+}
+
+.placeholder-content ol {
+    color: #f4e5d4;
+    line-height: 2;
+    margin: 30px auto;
+    padding-left: 20px;
+}
+
+.placeholder-content ol li {
+    margin-bottom: 10px;
+    text-align: left;
+}
+
+.placeholder-content .btn {
+    margin-top: 20px;
+    display: inline-block;
+    padding: 15px 40px;
+    font-size: 1rem;
+}
+
+/* Mobile responsive adjustments for JotForm */
+@media (max-width: 768px) {
+    .jotform-container {
+        padding: 15px;
+        margin: 20px 15px;
+    }
+    
+    .form-placeholder {
+        padding: 40px 20px;
+        min-height: 400px;
+    }
+    
+    .placeholder-content h3 {
+        font-size: 1.5rem;
+    }
+    
+    .placeholder-content p {
+        font-size: 1rem;
+    }
+}
