@@ -1,0 +1,513 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Makayla Moon | Content Creator</title>
+    <meta name="description" content="Welcome to Makayla Moon's world - exclusive content, daily updates, and more.">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Inter:wght@300;400;500;600&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;0,700;1,400&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Age Verification Modal -->
+    <div id="age-modal" class="age-modal">
+        <div class="age-modal-content">
+            <h2>Age Verification</h2>
+            <p>This website contains content intended for adults only.</p>
+            <p>Please confirm you are 18 years or older to continue.</p>
+            <div class="age-modal-buttons">
+                <button id="age-confirm" class="btn btn-primary">I am 18+</button>
+                <button id="age-decline" class="btn btn-secondary">Exit</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Navigation -->
+    <nav class="nav" id="nav">
+        <div class="nav-container">
+            <a href="#" class="nav-logo">Makayla Moon</a>
+            <button class="nav-toggle" id="nav-toggle" aria-label="Toggle navigation">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <ul class="nav-menu" id="nav-menu">
+                <li><a href="#home" class="nav-link">Home</a></li>
+                <li><a href="#about" class="nav-link">About</a></li>
+                <li><a href="#platforms" class="nav-link">Platforms</a></li>
+                <li><a href="#gallery" class="nav-link">Gallery</a></li>
+                <li><a href="#book" class="nav-link">Book</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-overlay"></div>
+        <div class="hero-content">
+            <h1 class="hero-title fade-in">Makayla Moon</h1>
+            <p class="hero-subtitle fade-in-delay">Content Creator & Digital Artist</p>
+            <p class="hero-tagline fade-in-delay-2">Welcome to my world of temptation and exclusive allure</p>
+            <a href="#platforms" class="btn btn-primary btn-magnetic fade-in-delay-3">Explore My World</a>
+        </div>
+        <div class="scroll-indicator">
+            <span></span>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about section">
+        <div class="container">
+            <div class="about-content">
+                <div class="about-image reveal">
+                    <div class="image-frame">
+                        <img src="hero-section.jpg" alt="Makayla Moon">
+                    </div>
+                </div>
+                <div class="about-text reveal-delay">
+                    <h2 class="section-title">Welcome</h2>
+                    <div class="title-underline"></div>
+                    <p>I'm so glad you're here babe!</p>
+                    <p>If you've come this far then I hope you stay for more.</p>
+                    <p>Explore my sites and let me be your alternative fanged girlfriend.</p>
+                    <p>A little bit naughty and a little bit nice, I am what you are looking for.</p>
+                    <p>I can't wait to see you!</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Platforms Section -->
+    <section id="platforms" class="platforms section">
+        <div class="container">
+            <h2 class="section-title centered">Connect With Me</h2>
+            <div class="title-underline centered"></div>
+            <p class="section-subtitle">Choose your preferred platform to access exclusive content and updates</p>
+            
+            <div class="platform-grid">
+                <!-- Card 1: Daily Wisdom / Social Media -->
+                <div class="platform-card reveal">
+                    <div class="platform-icon">
+                        <img src="cards/1715966503instagram-logo-with-text-png.png" alt="Instagram">
+                    </div>
+                    <h3>Instagram</h3>
+                    <p>For all my daily wisdom and updates</p>
+                    <a href="https://www.instagram.com/lilfangedgiri/" target="_blank" rel="noopener noreferrer" class="platform-link">Follow</a>
+                </div>
+
+                <!-- Card 2: Dirty Content Platform -->
+                <div class="platform-card reveal-delay">
+                    <div class="platform-icon">
+                        <img src="cards/Fansly.com_.png" alt="Fansly">
+                    </div>
+                    <h3>Premium Platform</h3>
+                    <p>Dirty content for dirty fans</p>
+                    <a href="https://fansly.com/makaylamoon/posts" target="_blank" rel="noopener noreferrer" class="platform-link">Subscribe</a>
+                </div>
+
+                <!-- Card 3: Naughtiest Content -->
+                <div class="platform-card reveal-delay-2">
+                    <div class="platform-icon">
+                        <img src="cards/onlyfans-logo-png_seeklogo-382790.png" alt="OnlyFans">
+                    </div>
+                    <h3>Exclusive Content</h3>
+                    <p>Unlock my naughtiest content here babe</p>
+                    <a href="https://onlyfans.com/makaylamoon" target="_blank" rel="noopener noreferrer" class="platform-link">Unlock</a>
+                </div>
+
+                <!-- Card 4: Come Play With Me -->
+                <div class="platform-card reveal">
+                    <div class="platform-icon">
+                        <img src="cards/Chaturbate-Logo-PNG.png" alt="Chaturbate">
+                    </div>
+                    <h3>Interactive Content</h3>
+                    <p>Come play with me</p>
+                    <a href="https://chaturbate.com/makaylamoonn" target="_blank" rel="noopener noreferrer" class="platform-link">Play Now</a>
+                </div>
+
+                <!-- Card 5: Spoil Me -->
+                <div class="platform-card reveal-delay">
+                    <div class="platform-icon">
+                        <img src="cards/Amazon-Wishlist-Logo-PNG.png" alt="Amazon Wishlist">
+                    </div>
+                    <h3>Wishlist</h3>
+                    <p>Spoil me because I'm a good girl</p>
+                    <a href="https://www.amazon.ca/hz/wishlist/ls/2CAN2ZQVWZT4S?ref_=wl_share" target="_blank" rel="noopener noreferrer" class="platform-link">Send Gift</a>
+                </div>
+
+                <!-- Card 6: Twitter/X -->
+                <div class="platform-card reveal-delay-2">
+                    <div class="platform-icon">
+                        <img src="cards/twitter-x-logo-png_seeklogo-492393.png" alt="Twitter/X">
+                    </div>
+                    <h3>Twitter / X</h3>
+                    <p>Follow me for real-time updates</p>
+                    <a href="https://x.com/MakaylaMoonnn" target="_blank" rel="noopener noreferrer" class="platform-link">Follow</a>
+                </div>
+
+                <!-- Card 7: Additional Platform -->
+                <div class="platform-card reveal">
+                    <div class="platform-icon">
+                        <img src="cards/tiktok-logo-png_seeklogo-368491.png" alt="TikTok">
+                    </div>
+                    <h3>TikTok</h3>
+                    <p>Short videos and daily content</p>
+                    <a href="https://www.tiktok.com/@makaylamoonofficial" target="_blank" rel="noopener noreferrer" class="platform-link">Watch</a>
+                </div>
+
+                <!-- Card 9: Twitch Streaming -->
+                <div class="platform-card reveal-delay-2">
+                    <div class="platform-icon">
+                        <img src="cards/twitch-new-logo-png_seeklogo-447572.png" alt="Twitch">
+                    </div>
+                    <h3>Twitch</h3>
+                    <p>Watch me stream live gaming and interactive content</p>
+                    <a href="YOUR_TWITCH_URL" target="_blank" rel="noopener noreferrer" class="platform-link">Watch Live</a>
+                </div>
+
+                <!-- Card 10: Kick Streaming -->
+                <div class="platform-card reveal">
+                    <div class="platform-icon">
+                        <img src="cards/kick-logo.png" alt="Kick">
+                    </div>
+                    <h3>Kick</h3>
+                    <p>Join my live gaming streams and exclusive shows</p>
+                    <a href="YOUR_KICK_URL" target="_blank" rel="noopener noreferrer" class="platform-link">Watch on Kick</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Gallery Section -->
+    <section id="gallery" class="gallery section">
+        <div class="container">
+            <h2 class="section-title centered">Gallery</h2>
+            <div class="title-underline centered"></div>
+            <p class="section-subtitle">A curated collection of my work</p>
+            
+            <!-- Gallery Carousel Container -->
+            <div class="gallery-carousel">
+                <button class="carousel-btn carousel-prev" id="carousel-prev" aria-label="Previous image">
+                    <span>❮</span>
+                </button>
+                
+                <div class="gallery-slides">
+                <!-- Gallery Image 1 -->
+                <div class="gallery-slide active">
+                    <img src="Pics for website/DSC08819.jpg" alt="Makayla Moon Gallery 1">
+                    <div class="hotspot" data-content="Exclusive Content"></div>
+                    <div class="hotspot" data-content="VIP Preview"></div>
+                    <div class="hotspot" data-content="Private Session"></div>
+                    <div class="gallery-overlay">
+                        <span class="gallery-icon">🔥</span>
+                    </div>
+                </div>
+                <!-- Gallery Image 2 -->
+                <div class="gallery-slide">
+                    <img src="Pics for website/DSC08870.jpg" alt="Makayla Moon Gallery 2">
+                    <div class="hotspot" data-content="Premium Access"></div>
+                    <div class="hotspot" data-content="Behind Scenes"></div>
+                    <div class="hotspot" data-content="Custom Request"></div>
+                    <div class="gallery-overlay">
+                        <span class="gallery-icon">💋</span>
+                    </div>
+                </div>
+                <!-- Gallery Image 3 -->
+                <div class="gallery-slide">
+                    <img src="Pics for website/DSC08878.jpg" alt="Makayla Moon Gallery 3">
+                    <div class="hotspot" data-content="Live Show"></div>
+                    <div class="hotspot" data-content="Fan Favorites"></div>
+                    <div class="hotspot" data-content="New Releases"></div>
+                    <div class="gallery-overlay">
+                        <span class="gallery-icon">🔥</span>
+                    </div>
+                </div>
+                <!-- Gallery Image 4 -->
+                <div class="gallery-slide">
+                    <img src="Pics for website/DSC08889.jpg" alt="Makayla Moon Gallery 4">
+                    <div class="hotspot" data-content="VIP Lounge"></div>
+                    <div class="hotspot" data-content="Private Chat"></div>
+                    <div class="hotspot" data-content="Exclusive Deal"></div>
+                    <div class="gallery-overlay">
+                        <span class="gallery-icon">💄</span>
+                    </div>
+                </div>
+                <!-- Gallery Image 5 -->
+                <div class="gallery-slide">
+                    <img src="Pics for website/DSC08921.jpg" alt="Makayla Moon Gallery 5">
+                    <div class="hotspot" data-content="Luxury Content"></div>
+                    <div class="hotspot" data-content="High Quality"></div>
+                    <div class="hotspot" data-content="Unrestricted"></div>
+                    <div class="gallery-overlay">
+                        <span class="gallery-icon">⚡</span>
+                    </div>
+                </div>
+                <!-- Gallery Image 6 -->
+                <div class="gallery-slide">
+                    <img src="Pics for website/DSC08969.jpg" alt="Makayla Moon Gallery 6">
+                    <div class="hotspot" data-content="Premium Only"></div>
+                    <div class="hotspot" data-content="Full Access"></div>
+                    <div class="hotspot" data-content="24/7 Available"></div>
+                    <div class="gallery-overlay">
+                        <span class="gallery-icon">💎</span>
+                    </div>
+                </div>
+                <!-- Gallery Image 7 -->
+                <div class="gallery-slide">
+                    <img src="Pics for website/DSC09002.jpg" alt="Makayla Moon Gallery 7">
+                    <div class="hotspot" data-content="Exclusive Content"></div>
+                    <div class="hotspot" data-content="VIP Preview"></div>
+                    <div class="hotspot" data-content="Private Session"></div>
+                    <div class="gallery-overlay">
+                        <span class="gallery-icon">🔥</span>
+                    </div>
+                </div>
+                <!-- Gallery Image 8 -->
+                <div class="gallery-slide">
+                    <img src="Pics for website/DSC09012.jpg" alt="Makayla Moon Gallery 8">
+                    <div class="hotspot" data-content="Premium Access"></div>
+                    <div class="hotspot" data-content="Behind Scenes"></div>
+                    <div class="hotspot" data-content="Custom Request"></div>
+                    <div class="gallery-overlay">
+                        <span class="gallery-icon">💋</span>
+                    </div>
+                </div>
+                <!-- Gallery Image 9 -->
+                <div class="gallery-slide">
+                    <img src="Pics for website/DSC09086.jpg" alt="Makayla Moon Gallery 9">
+                    <div class="hotspot" data-content="Live Show"></div>
+                    <div class="hotspot" data-content="Fan Favorites"></div>
+                    <div class="hotspot" data-content="New Releases"></div>
+                    <div class="gallery-overlay">
+                        <span class="gallery-icon">🔥</span>
+                    </div>
+                </div>
+                <!-- Gallery Image 10 -->
+                <div class="gallery-slide">
+                    <img src="Pics for website/DSC09132.jpg" alt="Makayla Moon Gallery 10">
+                    <div class="hotspot" data-content="VIP Lounge"></div>
+                    <div class="hotspot" data-content="Private Chat"></div>
+                    <div class="hotspot" data-content="Exclusive Deal"></div>
+                    <div class="gallery-overlay">
+                        <span class="gallery-icon">💄</span>
+                    </div>
+                </div>
+                <!-- Gallery Image 11 -->
+                <div class="gallery-slide">
+                    <img src="Pics for website/untitledshoot-036.jpg" alt="Makayla Moon Gallery 11">
+                    <div class="hotspot" data-content="Luxury Content"></div>
+                    <div class="hotspot" data-content="High Quality"></div>
+                    <div class="hotspot" data-content="Unrestricted"></div>
+                    <div class="gallery-overlay">
+                        <span class="gallery-icon">⚡</span>
+                    </div>
+                </div>
+                <!-- Gallery Image 12 -->
+                <div class="gallery-slide">
+                    <img src="Pics for website/untitledshoot-056-3.jpg" alt="Makayla Moon Gallery 12">
+                    <div class="hotspot" data-content="Premium Only"></div>
+                    <div class="hotspot" data-content="Full Access"></div>
+                    <div class="hotspot" data-content="24/7 Available"></div>
+                    <div class="gallery-overlay">
+                        <span class="gallery-icon">💎</span>
+                    </div>
+                </div>
+                <!-- Gallery Image 13 -->
+                <div class="gallery-slide">
+                    <img src="Pics for website/untitledshoot-075-2.jpg" alt="Makayla Moon Gallery 13">
+                    <div class="hotspot" data-content="Exclusive Content"></div>
+                    <div class="hotspot" data-content="VIP Preview"></div>
+                    <div class="hotspot" data-content="Private Session"></div>
+                    <div class="gallery-overlay">
+                        <span class="gallery-icon">🔥</span>
+                    </div>
+                </div>
+                <!-- Gallery Image 14 -->
+                <div class="gallery-slide">
+                    <img src="Pics for website/untitledshoot-107.jpg" alt="Makayla Moon Gallery 14">
+                    <div class="hotspot" data-content="Premium Access"></div>
+                    <div class="hotspot" data-content="Behind Scenes"></div>
+                    <div class="hotspot" data-content="Custom Request"></div>
+                    <div class="gallery-overlay">
+                        <span class="gallery-icon">💋</span>
+                    </div>
+                </div>
+                <!-- Gallery Image 15 -->
+                <div class="gallery-slide">
+                    <img src="Pics for website/untitledshoot-110.jpg" alt="Makayla Moon Gallery 15">
+                    <div class="hotspot" data-content="Live Show"></div>
+                    <div class="hotspot" data-content="Fan Favorites"></div>
+                    <div class="hotspot" data-content="New Releases"></div>
+                    <div class="gallery-overlay">
+                        <span class="gallery-icon">🔥</span>
+                    </div>
+                </div>
+                <!-- Gallery Image 16 -->
+                <div class="gallery-slide">
+                    <img src="Pics for website/untitledshoot-118.jpg" alt="Makayla Moon Gallery 16">
+                    <div class="hotspot" data-content="VIP Lounge"></div>
+                    <div class="hotspot" data-content="Private Chat"></div>
+                    <div class="hotspot" data-content="Exclusive Deal"></div>
+                    <div class="gallery-overlay">
+                        <span class="gallery-icon">💄</span>
+                    </div>
+                </div>
+                <!-- Gallery Image 17 -->
+                <div class="gallery-slide">
+                    <img src="Pics for website/untitledshoot-146.jpg" alt="Makayla Moon Gallery 17">
+                    <div class="hotspot" data-content="Luxury Content"></div>
+                    <div class="hotspot" data-content="High Quality"></div>
+                    <div class="hotspot" data-content="Unrestricted"></div>
+                    <div class="gallery-overlay">
+                        <span class="gallery-icon">⚡</span>
+                    </div>
+                </div>
+                <!-- Gallery Image 18 -->
+                <div class="gallery-slide">
+                    <img src="Pics for website/untitledshoot-232.jpg" alt="Makayla Moon Gallery 18">
+                    <div class="hotspot" data-content="Premium Only"></div>
+                    <div class="hotspot" data-content="Full Access"></div>
+                    <div class="hotspot" data-content="24/7 Available"></div>
+                    <div class="gallery-overlay">
+                        <span class="gallery-icon">💎</span>
+                    </div>
+                </div>
+                <!-- Gallery Image 19 -->
+                <div class="gallery-slide">
+                    <img src="Pics for website/untitledshoot-248.jpg" alt="Makayla Moon Gallery 19">
+                    <div class="hotspot" data-content="Exclusive Content"></div>
+                    <div class="hotspot" data-content="VIP Preview"></div>
+                    <div class="hotspot" data-content="Private Session"></div>
+                    <div class="gallery-overlay">
+                        <span class="gallery-icon">🔥</span>
+                    </div>
+                </div>
+                <!-- Gallery Image 20 -->
+                <div class="gallery-slide">
+                    <img src="Pics for website/untitledshoot-260.jpg" alt="Makayla Moon Gallery 20">
+                    <div class="hotspot" data-content="Premium Access"></div>
+                    <div class="hotspot" data-content="Behind Scenes"></div>
+                    <div class="hotspot" data-content="Custom Request"></div>
+                    <div class="gallery-overlay">
+                        <span class="gallery-icon">💋</span>
+                    </div>
+                </div>
+                <!-- Gallery Image 21 -->
+                <div class="gallery-slide">
+                    <img src="Pics for website/_RJF8323-Edit.jpg" alt="Makayla Moon Gallery 21">
+                    <div class="hotspot" data-content="Live Show"></div>
+                    <div class="hotspot" data-content="Fan Favorites"></div>
+                    <div class="hotspot" data-content="New Releases"></div>
+                    <div class="gallery-overlay">
+                        <span class="gallery-icon">🔥</span>
+                    </div>
+                </div>
+                </div>
+                
+                <button class="carousel-btn carousel-next" id="carousel-next" aria-label="Next image">
+                    <span>❯</span>
+                </button>
+                
+                <!-- Carousel Indicators -->
+                <div class="carousel-indicators" id="carousel-indicators"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Book a Session -->
+    <section id="book" class="connect section">
+        <div class="container">
+            <div class="connect-content">
+                <h2 class="section-title centered">Book a Session</h2>
+                <div class="title-underline centered"></div>
+                <p class="section-subtitle">Fill out the form below to request a booking. All required information must be provided for verification.</p>
+
+                <form class="booking-form">
+                    <div class="form-row">
+                        <input type="text" name="name" placeholder="Full Name" required>
+                        <input type="email" name="email" placeholder="Email Address" required>
+                    </div>
+                    <div class="form-row">
+                        <input type="tel" name="phone" placeholder="Phone Number" required>
+                        <select name="pronouns" required>
+                            <option value="">Pronouns</option>
+                            <option value="she/her">She/Her</option>
+                            <option value="he/him">He/Him</option>
+                            <option value="they/them">They/Them</option>
+                            <option value="other">Other</option>
+                        </select>
+                    </div>
+                    <div class="form-row">
+                        <select name="contact_method" required>
+                            <option value="">Preferred Contact Method</option>
+                            <option value="email">Email</option>
+                            <option value="phone">Phone</option>
+                            <option value="text">Text</option>
+                        </select>
+                        <input type="text" name="city" placeholder="Desired City" required>
+                    </div>
+                    <div class="form-row">
+                        <input type="text" name="date_length" placeholder="Date Length (e.g., 2 hours)" required>
+                        <input type="datetime-local" name="preferred_datetime" required>
+                    </div>
+                    <div class="form-row-radio">
+                        <label>
+                            <input type="radio" name="location_preference" value="incall" required>
+                            Incall (at a designated location)
+                        </label>
+                        <label>
+                            <input type="radio" name="location_preference" value="outcall" required>
+                            Outcall (traveling to your location)
+                        </label>
+                    </div>
+                    <div class="form-row">
+                        <div class="file-upload-wrapper">
+                            <label for="id_front">Upload ID (Front): <small>Government-issued ID</small></label>
+                            <input type="file" id="id_front" name="id_front" accept="image/*" required>
+                            <label for="id_front" class="file-upload-button">Choose File</label>
+                            <div class="file-name-display" id="id_front_display">No file chosen</div>
+                        </div>
+                        <div class="file-upload-wrapper">
+                            <label for="id_selfie">Upload Selfie Holding ID: <small>You holding your ID</small></label>
+                            <input type="file" id="id_selfie" name="id_selfie" accept="image/*" required>
+                            <label for="id_selfie" class="file-upload-button">Choose File</label>
+                            <div class="file-name-display" id="id_selfie_display">No file chosen</div>
+                        </div>
+                    </div>
+                    <button type="submit" class="btn btn-primary">Request Booking</button>
+                </form>
+
+                <p class="booking-note">
+                    <small>All information is kept confidential. Age and identity verification is required for all bookings. Response within 24 hours.</small>
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2025 Makayla Moon Inc. All rights reserved.</p>
+            <div class="footer-links">
+                <a href="#">Privacy Policy</a>
+                <a href="#">Terms of Service</a>
+                <a href="#">Contact</a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Lightbox -->
+    <div id="lightbox" class="lightbox">
+        <button class="lightbox-close" id="lightbox-close">&times;</button>
+        <button class="lightbox-nav lightbox-prev" id="lightbox-prev">&#8249;</button>
+        <button class="lightbox-nav lightbox-next" id="lightbox-next">&#8250;</button>
+        <img src="" alt="" id="lightbox-image">
+    </div>
+
+    <!-- EmailJS SDK -->
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
