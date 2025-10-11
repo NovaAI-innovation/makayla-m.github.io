@@ -281,20 +281,51 @@ const setupFileUpload = (inputId, displayId) => {
 setupFileUpload('id_front', 'id_front_display');
 setupFileUpload('id_selfie', 'id_selfie_display');
 
+// Detect if user is on mobile device
+const isMobileDevice = () => {
+    return /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ||
+           (navigator.maxTouchPoints && navigator.maxTouchPoints > 2);
+};
+
 // Compress image file to reduce size for email attachment
 const compressImage = async (file) => {
+    const isMobile = isMobileDevice();
+    
+    // More aggressive compression settings for mobile devices
     const options = {
-        maxSizeMB: 0.4,              // Max file size (400KB to stay under 500KB limit)
-        maxWidthOrHeight: 1920,      // Max dimensions
-        useWebWorker: true,          // Use web worker for better performance
-        fileType: 'image/jpeg',      // Convert to JPEG for better compression
-        initialQuality: 0.8          // Quality level (0.8 is good balance)
+        maxSizeMB: isMobile ? 0.25 : 0.35,         // Smaller size for mobile (250KB vs 350KB)
+        maxWidthOrHeight: isMobile ? 1280 : 1920,  // Lower resolution for mobile
+        useWebWorker: !isMobile,                   // Disable web workers on mobile for better compatibility
+        fileType: 'image/jpeg',                    // Convert to JPEG for better compression
+        initialQuality: isMobile ? 0.7 : 0.75,     // Lower quality on mobile for better compression
+        alwaysKeepResolution: false                // Allow resolution reduction if needed
     };
     
     try {
-        const compressedFile = await imageCompression(file, options);
-        console.log(`Original size: ${(file.size / 1024).toFixed(2)} KB`);
-        console.log(`Compressed size: ${(compressedFile.size / 1024).toFixed(2)} KB`);
+        console.log(`Device type: ${isMobile ? 'Mobile' : 'Desktop'}`);
+        console.log(`Original file size: ${(file.size / 1024 / 1024).toFixed(2)} MB`);
+        
+        // Multi-pass compression for very large files
+        let compressedFile = file;
+        let compressionAttempts = 0;
+        const maxAttempts = 3;
+        
+        while (compressedFile.size > options.maxSizeMB * 1024 * 1024 && compressionAttempts < maxAttempts) {
+            compressionAttempts++;
+            
+            // Reduce quality further with each attempt
+            const adjustedOptions = {
+                ...options,
+                initialQuality: options.initialQuality * (0.85 ** compressionAttempts)
+            };
+            
+            console.log(`Compression attempt ${compressionAttempts} with quality ${adjustedOptions.initialQuality.toFixed(2)}`);
+            compressedFile = await imageCompression(compressedFile, adjustedOptions);
+        }
+        
+        console.log(`Final compressed size: ${(compressedFile.size / 1024).toFixed(2)} KB`);
+        console.log(`Compression ratio: ${((1 - compressedFile.size / file.size) * 100).toFixed(1)}%`);
+        
         return compressedFile;
     } catch (error) {
         console.error('Compression error:', error);
@@ -366,6 +397,22 @@ bookingForm.addEventListener('submit', async (e) => {
             submitButton.disabled = false;
             return;
         }
+        
+        // Pre-validation: Warn if files are extremely large
+        const maxRecommendedSize = 20 * 1024 * 1024; // 20MB
+        if (idFrontFile.size > maxRecommendedSize || idSelfieFile.size > maxRecommendedSize) {
+            const shouldContinue = confirm(
+                'Warning: One or both of your images are very large.\n\n' +
+                'For best results, please take photos at a lower resolution or use an image editor to reduce the file size before uploading.\n\n' +
+                'Click OK to continue anyway (may take longer), or Cancel to go back and optimize your images.'
+            );
+            
+            if (!shouldContinue) {
+                submitButton.textContent = originalButtonText;
+                submitButton.disabled = false;
+                return;
+            }
+        }
 
         if (!isValid) {
             alert('Please fill out all required fields before submitting.');
@@ -393,7 +440,24 @@ bookingForm.addEventListener('submit', async (e) => {
             
         } catch (error) {
             console.error('Error processing images:', error);
-            alert('❌ Error processing ID images. Please try again with smaller images or contact support.');
+            
+            let errorMsg = '❌ Error processing ID images.\n\n';
+            
+            if (error.message && error.message.includes('memory')) {
+                errorMsg += 'Your device may not have enough memory to process these large images.\n\n';
+                errorMsg += 'Please try:\n';
+                errorMsg += '• Taking new photos at a lower resolution\n';
+                errorMsg += '• Using a photo editor app to reduce image size\n';
+                errorMsg += '• Trying on a different device';
+            } else {
+                errorMsg += 'Please try with smaller image files.\n\n';
+                errorMsg += 'Tips:\n';
+                errorMsg += '• Lower your camera resolution in settings\n';
+                errorMsg += '• Use an image compression app first\n';
+                errorMsg += '• Take photos in good lighting (smaller file sizes)';
+            }
+            
+            alert(errorMsg);
             submitButton.textContent = originalButtonText;
             submitButton.disabled = false;
             return;
@@ -492,14 +556,24 @@ Submitted: ${new Date().toLocaleString('en-US')}
         console.error('EmailJS Error:', error);
         
         // User-friendly error messages
-        let errorMessage = '❌ Sorry, there was an error sending your booking request. ';
+        let errorMessage = '❌ Sorry, there was an error sending your booking request.\n\n';
         
         if (error.text && error.text.includes('size')) {
-            errorMessage += 'The images are too large even after compression. Please try with smaller photos (taken with lower resolution).';
+            errorMessage += 'The images are too large even after compression.\n\n';
+            errorMessage += 'Please try:\n';
+            errorMessage += '• Take photos with your camera set to "Low" or "Medium" quality\n';
+            errorMessage += '• Compress images using an app before uploading\n';
+            errorMessage += '• Try on a desktop/laptop computer\n\n';
+            errorMessage += 'Or contact us directly at casperigram@gmail.com with your ID photos attached.';
         } else if (error.status === 412) {
-            errorMessage += 'Configuration error. Please contact support.';
+            errorMessage += 'Configuration error. Please contact support at casperigram@gmail.com.';
+        } else if (error.status === 422) {
+            errorMessage += 'The email service rejected the request.\n\n';
+            errorMessage += 'This usually means the attachments are still too large.\n\n';
+            errorMessage += 'Please email your booking request directly to:\ncasperigram@gmail.com';
         } else {
-            errorMessage += 'Please try again or contact us directly at casperigram@gmail.com.';
+            errorMessage += 'Network or service error.\n\n';
+            errorMessage += 'Please check your internet connection and try again, or contact us directly at:\ncasperigram@gmail.com';
         }
         
         alert(errorMessage);
