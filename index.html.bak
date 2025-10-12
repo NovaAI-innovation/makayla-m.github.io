@@ -501,6 +501,8 @@
                                 <option value="">Select location preference</option>
                                 <option value="incall">Incall (My Location)</option>
                                 <option value="outcall">Outcall (Your Location)</option>
+                                <option value="public">Public Venue</option>
+                                <option value="flexible">Flexible</option>
                             </select>
                         </div>
                     </div>
