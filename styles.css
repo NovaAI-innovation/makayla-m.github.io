@@ -1023,13 +1023,23 @@ button {
 
 .form-row {
     display: flex;
-    gap: var(--spacing-sm);
+    gap: var(--spacing-md);
     margin-bottom: var(--spacing-md);
+}
+
+.form-row-single {
+    max-width: 100%;
+}
+
+.form-row-double {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: var(--spacing-md);
 }
 
 .form-row input,
 .form-row select {
-    flex: 1;
+    width: 100%;
     padding: 1rem 1.5rem;
     border: 2px solid rgba(255, 255, 255, 0.3);
     border-radius: 12px;
@@ -1041,6 +1051,7 @@ button {
     letter-spacing: 0.5px;
     backdrop-filter: blur(10px);
     transition: var(--transition-normal);
+    box-sizing: border-box;
 }
 
 .form-row input::placeholder {
@@ -1120,7 +1131,7 @@ button {
 
 .form-row label {
     display: block;
-    margin-bottom: var(--spacing-xs);
+    margin-bottom: 0;
     color: var(--accent-gold);
     font-family: 'Cormorant Garamond', serif;
     font-weight: 600;
@@ -1529,6 +1540,10 @@ button {
         gap: var(--spacing-md);
     }
     
+    .form-row-double {
+        grid-template-columns: 1fr;
+    }
+    
     .form-row input,
     .form-row select {
         width: 100%;
@@ -1846,9 +1861,10 @@ button {
    =========================== */
 
 .form-group {
-    flex: 1;
     display: flex;
     flex-direction: column;
+    gap: 0.5rem;
+    width: 100%;
 }
 
 .form-row textarea {
@@ -1898,11 +1914,49 @@ button {
         flex-direction: column;
     }
     
+    .form-row-double {
+        grid-template-columns: 1fr;
+        gap: var(--spacing-md);
+    }
+    
     .form-group {
         width: 100%;
     }
     
     .form-actions .btn {
         width: 100%;
+    }
+}
+
+/* ===========================
+   Form Layout - Medium Devices (Tablets in portrait)
+   =========================== */
+
+@media (min-width: 481px) and (max-width: 900px) {
+    .booking-form {
+        max-width: 700px;
+        margin: 0 auto;
+    }
+    
+    .form-row-double {
+        grid-template-columns: 1fr;
+        gap: var(--spacing-md);
+    }
+    
+    .form-row input,
+    .form-row select {
+        font-size: 1rem;
+    }
+}
+
+/* Form Layout - Large Tablets and Small Desktop */
+@media (min-width: 901px) and (max-width: 1024px) {
+    .booking-form {
+        max-width: 800px;
+        margin: 0 auto;
+    }
+    
+    .form-row-double {
+        grid-template-columns: 1fr 1fr;
     }
 }

@@ -224,9 +224,9 @@ function handleSwipe() {
 // Initialize EmailJS with your public key
 // IMPORTANT: Replace 'YOUR_PUBLIC_KEY' with your actual EmailJS public key
 // Get it from: https://dashboard.emailjs.com/admin/account
-const EMAILJS_PUBLIC_KEY = 'YOUR_PUBLIC_KEY';
-const EMAILJS_SERVICE_ID = 'YOUR_SERVICE_ID';
-const EMAILJS_TEMPLATE_ID = 'YOUR_TEMPLATE_ID';
+const EMAILJS_PUBLIC_KEY = 'tB3W_IO_tAM6wSXw-';
+const EMAILJS_SERVICE_ID = 'service_42we7vj';
+const EMAILJS_TEMPLATE_ID = 'template_kgkgtf8';
 
 // Initialize EmailJS
 (function() {

@@ -427,14 +427,16 @@
 
                 <!-- Booking Form -->
                 <form id="booking-form" class="booking-form">
-                    <div class="form-row">
+                    <!-- Full Name - Full Width -->
+                    <div class="form-row form-row-single">
                         <div class="form-group">
                             <label for="name">Full Name *</label>
                             <input type="text" id="name" name="name" required placeholder="Your full name">
                         </div>
                     </div>
 
-                    <div class="form-row">
+                    <!-- Email & Phone - Two Column on Desktop -->
+                    <div class="form-row form-row-double">
                         <div class="form-group">
                             <label for="email">Email Address *</label>
                             <input type="email" id="email" name="email" required placeholder="your.email@example.com">
@@ -445,7 +447,8 @@
                         </div>
                     </div>
 
-                    <div class="form-row">
+                    <!-- Pronouns & Contact Method - Two Column on Desktop -->
+                    <div class="form-row form-row-double">
                         <div class="form-group">
                             <label for="pronouns">Pronouns *</label>
                             <select id="pronouns" name="pronouns" required>
@@ -467,14 +470,16 @@
                         </div>
                     </div>
 
-                    <div class="form-row">
+                    <!-- Desired City - Full Width -->
+                    <div class="form-row form-row-single">
                         <div class="form-group">
                             <label for="city">Desired City/Location *</label>
                             <input type="text" id="city" name="city" required placeholder="e.g., Edmonton, Calgary">
                         </div>
                     </div>
 
-                    <div class="form-row">
+                    <!-- Date Length & Date/Time - Two Column on Desktop -->
+                    <div class="form-row form-row-double">
                         <div class="form-group">
                             <label for="date_length">Date Length *</label>
                             <select id="date_length" name="date_length" required>
@@ -494,7 +499,8 @@
                         </div>
                     </div>
 
-                    <div class="form-row">
+                    <!-- Location Preference - Full Width -->
+                    <div class="form-row form-row-single">
                         <div class="form-group">
                             <label for="location_preference">Location Preference *</label>
                             <select id="location_preference" name="location_preference" required>
@@ -505,13 +511,15 @@
                         </div>
                     </div>
 
-                    <div class="form-row">
+                    <!-- Additional Information - Full Width -->
+                    <div class="form-row form-row-single">
                         <div class="form-group">
                             <label for="additional_info">Additional Information (Optional)</label>
                             <textarea id="additional_info" name="additional_info" rows="4" placeholder="Any special requests or additional details..."></textarea>
                         </div>
                     </div>
 
+                    <!-- Submit Button -->
                     <div class="form-actions">
                         <button type="submit" class="btn btn-primary">Submit Booking Request</button>
                     </div>
